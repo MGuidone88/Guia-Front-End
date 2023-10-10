@@ -1,123 +1,424 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Guia Front End</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Guia Front End</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Guia Front End</h1>
-    </header>
-    <main class="container">
-        <h2>Git y Git-Hub</h2>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  git config --global user.name "mi nombre"
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p>Con este comando en la consola indicamos el nombre de usuario que configuramos en la computadora.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  git config --global user.email "ejemplo@ejemplo.com"
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p>Con este comando configuramos el email del usuario dentro de la consola para la la computadora que estemos utilizando.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  git config user.name / git config user.email
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <p>Con estos dos comandos podemos ver el usuario y el email que tenemos configurado en la computadora. Si no responde alguno de los dos significa que todavia no hemos hecho el paso anterior de configurar el email o el nombre de usuario.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    git help / git init / cls
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Con el comando git help podemos ver en la consola los diferentes comandos para utilizar. Con git init iniciamos un repositorio en la carpeta en donde nos encontramos. Este es el primer paso antes de usar git add . y git commit. Con el comando cls limpiamos la consola.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    git add . / git status -s / git commit -m "mensaje"
-                  </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Con el comando git add . juntamos todos los archivos y los ponemos dentro de una caja para luego ser commiteados. </p>
-                    <p>Con git status -s podremos ver en la consola todos los archivos que tenemos dentro de esa caja, la misma que hicimos utilizando git add .</p>
-                    <p>Con git commit -m "mensaje" creamos una version de nuestro codigo, que se guardara con el mensaje que escribamos dentro de las comillas.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    subir repositorio a Git-Hub / git push origin main
-                  </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Despues que creamos el repositorio en la pagina de Git-Hub, podremos ver en ese mismo lugar los comandos para hacer el link con nuestro repositorio remoto. </p>
-                    <p>Con git push origin main, si es que nuestra rama principal se llama main, subimos los archivos de nuestra pc al repositorio en Git-Hub.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    git remote add origin https... / git branch -M main
-                  </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Con git remote add... estamos diciendole a la terminal que vamos a subir un repositorio local a el link que nos brinda Git-Hub. </p>
-                    <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a main. </p>
-                  </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                   
-                  </button>
-                </h2>
-                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Con git remote add... estamos diciendole a la terminal que vamos a subir un repositorio local a el link que nos brinda Git-Hub. </p>
-                    <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a main. </p>
-                  </div>
-                </div>
+  <header>
+    <h1>Guia Front End</h1>
+  </header>
+  <nav>
+    <a href="#gitygithub">Git y Git-Hub</a>
+    <a href="#htmlycss">Html y Css</a>
+    <a href="#javascript">Javascript</a>
+  </nav>
+  <main class="container">
+    <section id="gitygithub">
+      <h2 >Git y Git-Hub</h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              git config --global user.name "mi nombre"
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con este comando en la consola indicamos el nombre de usuario que configuramos en la computadora.</p>
             </div>
           </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              git config --global user.email "ejemplo@ejemplo.com"
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con este comando configuramos el email del usuario dentro de la consola para la la computadora que
+                estemos utilizando.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              git config user.name / git config user.email
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con estos dos comandos podemos ver el usuario y el email que tenemos configurado en la computadora. Si
+                no responde alguno de los dos significa que todavia no hemos hecho el paso anterior de configurar el
+                email o el nombre de usuario.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              git help / git init / cls
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git help podemos ver en la consola los diferentes comandos para utilizar. Con git init
+                iniciamos un repositorio en la carpeta en donde nos encontramos. Este es el primer paso antes de usar
+                git add . y git commit. Con el comando cls limpiamos la consola.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              git add . / git status -s / git commit -m "mensaje"
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git add . juntamos todos los archivos y los ponemos dentro de una caja para luego ser
+                commiteados. </p>
+              <p>Con git status -s podremos ver en la consola todos los archivos que tenemos dentro de esa caja, la
+                misma que hicimos utilizando git add .</p>
+              <p>Con git commit -m "mensaje" creamos una version de nuestro codigo, que se guardara con el mensaje que
+                escribamos dentro de las comillas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              subir repositorio a Git-Hub / git push origin main
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Despues que creamos el repositorio en la pagina de Git-Hub, podremos ver en ese mismo lugar los
+                comandos para hacer el link con nuestro repositorio remoto. </p>
+              <p>Con git push origin main, si es que nuestra rama principal se llama main, subimos los archivos de
+                nuestra pc al repositorio en Git-Hub.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              git remote add origin https... / git branch -M main
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con git remote add... estamos diciendole a la terminal que vamos a subir un repositorio local a el link
+                que nos brinda Git-Hub. </p>
+              <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a
+                main. </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              git clone https... /
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git clone mas el link de la pagina de nuestro repositorio en Git-Hub podremos clonar el
+                repositorio en la carpeta seleccionada.</p>
+              <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a
+                main. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="htmlycss">
+      <h2 >HTML y CSS</h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              justify-content
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>flex-start / flex-end / center / space-around / space-between / space-evenly</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              align-items
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>stretch (valor por defecto) / flex-start / flex-end / center</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              align-self
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>(En el elemento que pertenece al contenedor). flex-start / flex-end / center / stretch.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              git help / git init / cls
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git help podemos ver en la consola los diferentes comandos para utilizar. Con git init
+                iniciamos un repositorio en la carpeta en donde nos encontramos. Este es el primer paso antes de usar
+                git add . y git commit. Con el comando cls limpiamos la consola.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              git add . / git status -s / git commit -m "mensaje"
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git add . juntamos todos los archivos y los ponemos dentro de una caja para luego ser
+                commiteados. </p>
+              <p>Con git status -s podremos ver en la consola todos los archivos que tenemos dentro de esa caja, la
+                misma que hicimos utilizando git add .</p>
+              <p>Con git commit -m "mensaje" creamos una version de nuestro codigo, que se guardara con el mensaje que
+                escribamos dentro de las comillas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              subir repositorio a Git-Hub / git push origin main
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Despues que creamos el repositorio en la pagina de Git-Hub, podremos ver en ese mismo lugar los
+                comandos para hacer el link con nuestro repositorio remoto. </p>
+              <p>Con git push origin main, si es que nuestra rama principal se llama main, subimos los archivos de
+                nuestra pc al repositorio en Git-Hub.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              git remote add origin https... / git branch -M main
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con git remote add... estamos diciendole a la terminal que vamos a subir un repositorio local a el link
+                que nos brinda Git-Hub. </p>
+              <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a
+                main. </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              git clone https... /
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git clone mas el link de la pagina de nuestro repositorio en Git-Hub podremos clonar el
+                repositorio en la carpeta seleccionada.</p>
+              <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a
+                main. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="javascript">
+      <h2 >Javascript</h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Objeto Math
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Math.pow: Este metodo nos permite potenciar un numero. El primer numero sera la base y el segundo la potencia. Ej: Math.pow(2,3) = 8.</p>
+              <p>Math.round: Redondea el numero decimal al entero mas proximo.</p>
+              <p>Math.floor: Redondea el numero decimal al entero de menor valor.</p>
+              <p>Math.ceil: Redondea el numero decimal al entero siguiente.</p>
+              <p>Math.min y Math.max: Esos dos metodos nos permiter conocer el numero menor y mayor de un conjunto de numeros.</p>
+              <p>Math.random: Este ultimo metodo nos permitira generar un numero decimal entre el 0 y el 1.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Arrays Metodos
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>.push(): Añade uno o mas elemento al final de un arreglo.</p>
+              <p>.unshift(): Añade uno o mas elemento al comienzo de un arreglo.</p>
+              <p>.pop(): Elimina y devuelve el ultimo elemento de un arreglo.</p>
+              <p>.shift(): Elimina y devuelve el primer elemento de un arreglo.</p>
+              <p>.includes(): Determina si un arreglo incluye o contiene un elemento especifico. Devuelve true o false en cada caso.</p>
+              <p>.every(): Determina si todos los elementos de un arreglo satisfacen una misma condicion.</p>
+              <p>.split(): Convierte un string en un arreglo, donde cada elemeto contendra un sub-string, dependiendo del parametro divisor que indiquemos.</p>
+              <p>.join(): Convierte un arreglo en un string, uniendo todos los elementos de este en una cadena. Podemos indicarle dentro del parentesis con comillas el divisor.</p>
+              <p>.forEach(): Nos permite recorrer un arreglo, realizando una accion en cada caso.</p>
+              <p>.map(): Tambien nos permite recorrer un arreglo y realizar una accion por cada elemento. La diferencia que este metodo devuelve un nuevo arreglo los elementos modificados.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              git config user.name / git config user.email
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con estos dos comandos podemos ver el usuario y el email que tenemos configurado en la computadora. Si
+                no responde alguno de los dos significa que todavia no hemos hecho el paso anterior de configurar el
+                email o el nombre de usuario.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              git help / git init / cls
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git help podemos ver en la consola los diferentes comandos para utilizar. Con git init
+                iniciamos un repositorio en la carpeta en donde nos encontramos. Este es el primer paso antes de usar
+                git add . y git commit. Con el comando cls limpiamos la consola.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              git add . / git status -s / git commit -m "mensaje"
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git add . juntamos todos los archivos y los ponemos dentro de una caja para luego ser
+                commiteados. </p>
+              <p>Con git status -s podremos ver en la consola todos los archivos que tenemos dentro de esa caja, la
+                misma que hicimos utilizando git add .</p>
+              <p>Con git commit -m "mensaje" creamos una version de nuestro codigo, que se guardara con el mensaje que
+                escribamos dentro de las comillas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              subir repositorio a Git-Hub / git push origin main
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Despues que creamos el repositorio en la pagina de Git-Hub, podremos ver en ese mismo lugar los
+                comandos para hacer el link con nuestro repositorio remoto. </p>
+              <p>Con git push origin main, si es que nuestra rama principal se llama main, subimos los archivos de
+                nuestra pc al repositorio en Git-Hub.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              git remote add origin https... / git branch -M main
+            </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con git remote add... estamos diciendole a la terminal que vamos a subir un repositorio local a el link
+                que nos brinda Git-Hub. </p>
+              <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a
+                main. </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              git clone https... /
+            </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Con el comando git clone mas el link de la pagina de nuestro repositorio en Git-Hub podremos clonar el
+                repositorio en la carpeta seleccionada.</p>
+              <p>Con git branch -M main nosotros modificamos el nombre de la rama principal, cambiandola de master a
+                main. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
+</body>
+
 </html>

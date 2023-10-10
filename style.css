@@ -7,8 +7,26 @@ header{
     background-color: lightgrey;
     text-align: center;
     padding: 20px;
+    text-transform: uppercase;
 }
-main h2{
+nav{
+    background-color: aquamarine;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    text-transform: uppercase;
+}
+main section h2{
     text-align: center;
     padding: 10px;
+}
+main section{
+    padding-top: 100px;
 }
